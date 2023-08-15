@@ -691,7 +691,9 @@ def test_paddle_rot90(
     test_gradients=st.just(False),
     ground_truth_backend="torch",
 )
-def test_unique(*, dtype_x_axis, none_axis, test_flags, backend_fw, fn_name, on_device):
+def test_paddle_unique(
+    *, dtype_x_axis, none_axis, test_flags, backend_fw, fn_name, on_device
+):
     dtype, x, axis = dtype_x_axis
     if none_axis:
         axis = None
